@@ -8,34 +8,49 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/img/favicon.png">
     <!-- stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body id="index_body">
-    <header id="index_header_container">
-        <nav id="index_header_nav">
-            <a href="index.html" id="index_logo_link"><img src="assets/images/img/favicon.png" alt="logo"></a>
+    <header id="header_container">
+        <nav id="header_nav">
+            <a href="index.html" id="logo_link"><img src="assets/images/img/favicon.png" alt="logo" id="logo"></a>
             <input type="checkbox" name="nav-dropdown" id="nav_dropdown">
             <label for="nav-dropdown" class="nav-dropdown-label"><i class="fa-solid fa-bars" style="color: #cbd5e3;"></i></label>
-            <ul id="index_nav_menu">
-                <li><a href="index.html" id="index_nav_link_home">Home</a></li>
-                <li><a href="studio.html" id="index_nav_link_studio">Studio</a></li>
-                <li><a href="team.html" id="index_nav_link_team">Team</a></li>
-                <li><a href="services.html" id="index_nav_link_services">Services</a></li>
+            <ul id="nav_menu">
+                <li><a href="index.html" id="nav_link_home">Home</a></li>
+                <li><a href="studio.html" id="nav_link_studio">Studio</a></li>
+                <li><a href="team.html" id="nav_link_team">Team</a></li>
+                <li><a href="services.html" id="nav_link_services">Services</a></li>
             </ul>
-            <section id="index_nav_right_container">
-                <a href="contact us" id="index_nav_contact"></a>
-                <div id="index_nav_right_sep"></div>
-                <fieldset style="display:inline" id="index_nav_radio_container">
-                    <input type="radio" name="language" id="index_nav_radio_de" value="de" >
-                    <label for="index_nav_radio_de">de</label>
+            <section id="nav_right_container">
+                <a href="contact.html" id="nav_contact" class="button">contact us</a>
+                <div id="nav_right_sep"></div>
+                <fieldset style="display:inline" id="nav_radio_container">
+                    <input type="radio" name="language" id="nav_radio_de" value="de" checked>
+                    <label for="nav_radio_de">de</label>
         
-                    <input type="radio" name="language" id="index_nav_radio_en" value="en">
-                    <label for="index_nav_radio_en">en</label>
+                    <input type="radio" name="language" id="nav_radio_en" value="en">
+                    <label for="nav_radio_en">en</label>
                 </fieldset>
             </section>
         </nav>
-        <section id="index_header_section"></section>
+        <section id="header_section">
+            <div id="header_section_img_container">
+                <img src="assets/images/studio/studio01.jpg" alt="Bild 1">
+                <img src="assets/images/studio/studio02.jpg" alt="Bild 2">
+                <img src="assets/images/studio/studio03.jpg" alt="Bild 3">
+                <img src="assets/images/studio/studio04.jpg" alt="Bild 4">
+                <img src="assets/images/studio/studio05_fck_robin.jpg" alt="Bild 5">
+                <img src="assets/images/studio/studio06.jpg" alt="Bild 6">
+                <img src="assets/images/studio/studio07.jpg" alt="Bild 7">
+                <img src="assets/images/studio/studio08.jpg" alt="Bild 8">
+            </div>
+            <div class="text">
+                hallo, du da! Dieser Text existiert nur, um die Farbe zu zeigen...\ <br>
+                Natürlich im Kontext!
+            </div>
+        </section>
 
     </header>
 
