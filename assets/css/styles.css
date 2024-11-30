@@ -88,9 +88,7 @@ nav > * {
     margin: 0 16px;
 }
 
-.navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparent nach Scrollen */
-  }
+
   
 #logo_link {
     display: flex; /* Aktiviert Flexbox */
