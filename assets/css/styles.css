@@ -104,8 +104,8 @@ nav > * {
 }
 
 #nav_menu {
-    display: flex;
-    font-size: 19px;
+    display: none;
+    
 }
 
 #nav_menu li {
@@ -113,8 +113,24 @@ nav > * {
     list-style: none;
 }
 
+
+#nav_dropdown:checked ~ #nav_menu,
+#nav_dropdown:checked ~ #nav_right_container {
+    display: block;
+   
+}
+
+#nav_dropdown {
+    display: none;
+}
+
+.nav-dropdown-label {
+    margin: auto 20px;
+    
+}
+
 #nav_right_container {
-    display: flex;
+    display: none;
     align-items: center;
     height: 100%;
     margin-left: auto;
@@ -246,7 +262,7 @@ input[name="language"]:checked + label {
 #header_section_title {
     position: absolute;
     top: 51%;
-    left: 10%;
+    left: 5%;
     color: var(--text-color);
     text-shadow: 2px 2px 4px #000000;
 }
@@ -264,6 +280,22 @@ input[name="language"]:checked + label {
 /* A TABLET FROM 768px - changed to 780: ipad mini has too less space for an expanded nav  */
 
 @media screen and (min-width: 780px) {
+    .nav-dropdown-label {
+        display: none;
+    }
+
+    #nav_menu {
+        display: flex;
+        font-size: 19px;
+    }
+
+    #nav_right_container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin-left: auto;
+        
+    }
     /* PAGE 1: index.html 768px ---------------------------------------------------- */
     /* PAGE 2: studio.html 768px --------------------------------------------------- */
     /* PAGE 3: team.html 768px ----------------------------------------------------- */
