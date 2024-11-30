@@ -17,6 +17,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Ubuntu", sans-serif;
+
 }
 
 h1,
@@ -29,6 +30,7 @@ h3 {
 body {
     min-height: 100vh;
     background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 nav {
@@ -37,7 +39,7 @@ nav {
     align-items: center; /* Zentriert vertikal */
     height: 50px;
     background-color: transparent;
-    position:absolute;
+    position:fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -159,6 +161,10 @@ input[name="language"]:checked + label {
 
 
 /* PAGE 1: index.html specific ELEMENTS & STYLES ----------------------------- */
+#header_section {
+    position: relative;
+}
+
 #header_section_img_container {
     position: relative; /* Container als Bezugspunkt */
     width: 100%; /* Beispielbreite */
@@ -177,6 +183,7 @@ input[name="language"]:checked + label {
     animation: fade 32s infinite; /* Animation für den gesamten Zyklus */
     object-fit: cover; /* Zuschneiden des Bildes, um Verzerrungen zu vermeiden */
     object-position: center; /* Zentriert das Bild */
+    filter: brightness(0.3); /* 0.7 = 70% Helligkeit */
   }
   
   #header_section_img_container img:nth-child(1) {
@@ -231,6 +238,14 @@ input[name="language"]:checked + label {
         opacity: 0;
     }
 
+}
+
+#header_section_title {
+    position: absolute;
+    top: 51%;
+    left: 10%;
+    color: var(--text-color);
+    text-shadow: 5px black;
 }
 
 
