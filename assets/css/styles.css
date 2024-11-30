@@ -31,6 +31,7 @@ body {
     min-height: 100vh;
     background-color: var(--background-color);
     color: var(--text-color);
+    height: 2500px;
 }
 
 nav {
@@ -87,6 +88,10 @@ nav > * {
     margin: 0 16px;
 }
 
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparent nach Scrollen */
+  }
+  
 #logo_link {
     display: flex; /* Aktiviert Flexbox */
     align-items: center; /* Zentriert das Bild vertikal */
@@ -183,7 +188,7 @@ input[name="language"]:checked + label {
     animation: fade 32s infinite; /* Animation für den gesamten Zyklus */
     object-fit: cover; /* Zuschneiden des Bildes, um Verzerrungen zu vermeiden */
     object-position: center; /* Zentriert das Bild */
-    filter: brightness(0.3); /* 0.7 = 70% Helligkeit */
+    filter: brightness(0.33); /* 0.7 = 70% Helligkeit */
   }
   
   #header_section_img_container img:nth-child(1) {
@@ -245,7 +250,7 @@ input[name="language"]:checked + label {
     top: 51%;
     left: 10%;
     color: var(--text-color);
-    text-shadow: 5px black;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 
