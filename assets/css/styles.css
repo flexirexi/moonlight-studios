@@ -83,7 +83,7 @@ a:hover {
 }
 
 nav > * {
-    margin: 0 16px;
+    margin: 0 0px;
 }
 
 
@@ -108,6 +108,10 @@ nav > * {
 #nav_menu li {
     min-width:  80px;
     list-style: none;
+    font-size: 30px;
+    padding: 10px 5px;
+    margin-left: 18px;
+
 }
 
 
@@ -116,7 +120,10 @@ nav > * {
     position: absolute;
     top: max(50px, min(150px, 7.5vh));
     right: 0;
-   
+    left: 0;
+    /* padding-bottom: auto; */
+    height: calc(100vh - max(50px, min(150px, 7.5vh)));
+
 }
 
 #nav_dropdown {
@@ -136,7 +143,7 @@ nav > * {
 }
 
 .menu-icon.animate {
-    transform: rotate(360deg) scale(1.2); /* Drehung und Skalierung */
+    transform: rotate(30deg) scale(0.8); /* Drehung und Skalierung */
     opacity: 0.4; /* Leicht transparent */
 }
 
@@ -145,24 +152,30 @@ nav > * {
     align-items: center;
     width: auto;
     height: 100%;
-    
+    padding-bottom: 0;
+}
+
+#nav_right_subcontainer {
+    display: flex;
 }
 
 #nav_contact {
-    height: 30px;
+    height: 35px;
+    margin-left: 22px;
+    
 }
 
 #nav_right_sep {
-    height: 80%;
-    width: 1px;
-    background-color: var(--primary-color);
-    margin: 0 16px;
+    display: none;
 }
 
 #nav_radio_container {
+    display: flex;
+    align-items: center;
     color: var(--text-color-inactive);
     border-color: #00000000;
     margin-right: 7px;
+    margin-left: auto;
     
 }
 
@@ -172,7 +185,7 @@ input[name="language"] {
 }
 
 #nav_radio_container label {
-    padding: 2px 6px;
+    padding: 2px 10px;
 }
 
 input[name="language"]:checked + label {
@@ -304,7 +317,7 @@ input[name="language"]:checked + label {
     }
 
     nav > * {
-        margin: 0 16px;
+        margin: auto 16px;
     }
     
     .nav-dropdown-label {
@@ -313,8 +326,10 @@ input[name="language"]:checked + label {
 
     #nav_right_container {
         display: flex;
-        height: 100%;
+        height: auto;
         width: 100%;
+        backdrop-filter: none;
+        
         
     }
     #nav_menu {
@@ -323,8 +338,40 @@ input[name="language"]:checked + label {
         margin-right: auto;
     }
 
+    #nav_menu li {
+        min-width:  80px;
+        list-style: none;
+        font-size: 20px;
+    }
+
     #nav_contact {
         margin-left: auto;
+        height: 30px;
+    }
+
+    #nav_right_subcontainer {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    #nav_radio_container {
+        display: inline-flex;
+        color: var(--text-color-inactive);
+        border-color: #00000000;
+        vertical-align: middle;
+        margin-right: 0px;
+        margin-left: 0px;
+        text-align: right;
+        
+    }
+
+    #nav_right_sep {
+        display: inline;
+        height: 80%;
+        width: 1px;
+        background-color: var(--primary-color);
+        margin: 0 18px;
     }
 
     /* PAGE 1: index.html 768px ---------------------------------------------------- */
