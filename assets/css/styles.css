@@ -36,9 +36,7 @@ body {
 
 nav {
     display: flex;
-    justify-content: space-around; /* Oder: space-between, center, etc. */
-    align-items: center; /* Zentriert vertikal */
-    height: 50px;
+    height: max(50px, min(150px, 7.5vh));
     background-color: transparent;
     position:fixed;
     top: 0;
@@ -104,8 +102,7 @@ nav > * {
 }
 
 #nav_menu {
-    display: none;
-    
+    display: block;
 }
 
 #nav_menu li {
@@ -114,26 +111,40 @@ nav > * {
 }
 
 
-#nav_dropdown:checked ~ #nav_menu,
 #nav_dropdown:checked ~ #nav_right_container {
     display: block;
+    position: absolute;
+    top: max(50px, min(150px, 7.5vh));
+    right: 0;
    
 }
 
 #nav_dropdown {
     display: none;
+    margin-left: auto;
 }
 
 .nav-dropdown-label {
-    margin: auto 20px;
+    margin: auto 22px auto auto;
     
+}
+
+.menu-icon {
+    font-size: 3rem; /* Icon-Größe */
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Weiche Übergänge */
+}
+
+.menu-icon.animate {
+    transform: rotate(90deg) scale(1.2); /* Drehung und Skalierung */
+    opacity: 0.8; /* Leicht transparent */
 }
 
 #nav_right_container {
     display: none;
     align-items: center;
+    width: auto;
     height: 100%;
-    margin-left: auto;
     
 }
 
@@ -261,7 +272,7 @@ input[name="language"]:checked + label {
 
 #header_section_title {
     position: absolute;
-    top: calc(50vh - 15vw);
+    top: max(29%, min(57%, calc(70vh - 4vw - 120px)));
     left: 5%;
     color: var(--text-color);
     text-shadow: 2px 2px 4px #000000;
@@ -280,22 +291,42 @@ input[name="language"]:checked + label {
 /* A TABLET FROM 768px - changed to 780: ipad mini has too less space for an expanded nav  */
 
 @media screen and (min-width: 780px) {
+    nav {
+        display: flex;
+        align-items: center; /* Zentriert vertikal */
+        height: max(50px, min(150px, 7.5vh));
+        background-color: transparent;
+        position:fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+    nav > * {
+        margin: 0 16px;
+    }
+    
     .nav-dropdown-label {
         display: none;
     }
 
+    #nav_right_container {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        
+    }
     #nav_menu {
         display: flex;
         font-size: 19px;
+        margin-right: auto;
     }
 
-    #nav_right_container {
-        display: flex;
-        align-items: center;
-        height: 100%;
+    #nav_contact {
         margin-left: auto;
-        
     }
+
     /* PAGE 1: index.html 768px ---------------------------------------------------- */
     /* PAGE 2: studio.html 768px --------------------------------------------------- */
     /* PAGE 3: team.html 768px ----------------------------------------------------- */
