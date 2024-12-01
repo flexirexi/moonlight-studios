@@ -4,9 +4,6 @@ const nav_cont = document.getElementById("nav_right_container");
 const navbar = document.getElementById("header_nav");
 
 
-window.onload = function () {
-  nav_cont.style.display = "none";
-}
 
 document.addEventListener('scroll', function () {
   if (window.scrollY > 10) { // Wenn mehr als 50px gescrollt wurde
@@ -28,7 +25,6 @@ menuIcon.addEventListener('click', function () {
     nav.style.backgroundColor = "black";
     //nav.style.webkitBackdropFilter = 'blur(10px)'; //funzt irgendwie nicht - entweder nav oder nav_cont aber nicht beides...
 
-    nav_cont.style.display = "block";
     nav_cont.style.backdropFilter = "blur(10px)";
     nav_cont.style.webkitBackdropFilter = 'blur(10px)';
 
@@ -45,7 +41,7 @@ menuIcon.addEventListener('click', function () {
     //nav.style.backdropFilter = "none";
     //nav.style.webkitBackdropFilter = 'none';
 
-    nav_cont.style.display = "none";
+
     nav_cont.style.backdropFilter = "none";
     nav_cont.style.webkitBackdropFilter = 'none';
 
