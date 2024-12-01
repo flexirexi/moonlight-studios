@@ -261,7 +261,7 @@ input[name="language"]:checked + label {
 
 #header_section_title {
     position: absolute;
-    top: 51%;
+    top: calc(50vh - 15vw);
     left: 5%;
     color: var(--text-color);
     text-shadow: 2px 2px 4px #000000;
