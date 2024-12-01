@@ -212,12 +212,22 @@ input[name="language"] {
 
 #nav_radio_container label {
     padding: 2px 10px;
+    
+}
+
+#nav_radio_container label:hover {
+    box-shadow: 2px 2px 3px rgb(44, 44, 44);
+}
+
+input[name="language"]:not(:checked) + label {
+    background-color: #00000050;
 }
 
 input[name="language"]:checked + label {
     color: var(--text-color);
     background-color: var(--primary-color);
 }
+
 
 #header_section {
     position: relative;
