@@ -3,6 +3,11 @@ const nav = document.getElementById("header_nav");
 const nav_cont = document.getElementById("nav_right_container");
 const navbar = document.getElementById("header_nav");
 
+
+window.onload = function () {
+  nav_cont.style.display = "none";
+}
+
 document.addEventListener('scroll', function () {
   if (window.scrollY > 10) { // Wenn mehr als 50px gescrollt wurde
     let value = "#000000" + parseInt(Math.max(10, Math.min(255, window.scrollY / 1.9))).toString(16);
@@ -22,12 +27,15 @@ menuIcon.addEventListener('click', function () {
     
     nav.style.backgroundColor = "black";
     //nav.style.webkitBackdropFilter = 'blur(10px)'; //funzt irgendwie nicht - entweder nav oder nav_cont aber nicht beides...
+
+    nav_cont.style.display = "block";
     nav_cont.style.backdropFilter = "blur(10px)";
     nav_cont.style.webkitBackdropFilter = 'blur(10px)';
 
     document.body.style.overflow = 'hidden'; //scrollen verbieten
     nav_cont.style.overflowY = "auto"; //es gibt smartphones im querformat, bei denen das menu größer als der display ist..
-    
+    document.body.style.overscrollBehavior = "none" //kein neu laden durch runterziehen
+
   } else {
     //schließen
     menuIcon.classList.remove('fa-times');
@@ -36,11 +44,17 @@ menuIcon.addEventListener('click', function () {
 
     //nav.style.backdropFilter = "none";
     //nav.style.webkitBackdropFilter = 'none';
+
+    nav_cont.style.display = "none";
     nav_cont.style.backdropFilter = "none";
     nav_cont.style.webkitBackdropFilter = 'none';
 
+
     document.body.style.overflow = ''; //scrollen erlauben
+    document.body.style.overscrollBehavior = "none" //kein neu laden durch runterziehen
     nav_cont.style.overflowY = "hidden"; //rein pro forma wieder rückgängig machen..
+ 
+
 
     //anstatt die hintergrundfarbe ganz zu löschen, lieber in den zustand bringen, in den sie laut scroll position wäre:
     let value = "#000000" + parseInt(Math.max(10, Math.min(255, window.scrollY / 1.9))).toString(16);
@@ -52,8 +66,11 @@ menuIcon.addEventListener('click', function () {
 
   // Entferne die Animation nach der Dauer (300ms in diesem Fall)
   setTimeout(() => menuIcon.classList.remove('animate'), 300);
-
-
-  
 });
 
+document.addEventListener('touchmove', function (e) {
+  // Prüfen, ob die Seite ganz oben ist und der Benutzer nach unten scrollt
+  if (window.scrollY === 0 && e.touches[0].clientY > e.touches[0].pageY) {
+    e.preventDefault(); // Nur Pull-to-Refresh blockieren
+  }
+}, { passive: false });

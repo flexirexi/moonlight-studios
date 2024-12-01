@@ -11,13 +11,16 @@
     --text-color: #ecf0f1;      /* Weiß */
     --text-color-inactive: #b6b9ba;
   }
+html {
+    overscroll-behavior: none;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Ubuntu", sans-serif;
-
+    
 }
 
 h1,
@@ -32,6 +35,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     height: 2500px;
+    
 }
 
 nav {
@@ -43,6 +47,7 @@ nav {
     left: 0;
     right: 0;
     z-index: 10;
+    
 }
 
 a {
@@ -94,6 +99,7 @@ nav > * {
     justify-content: center; /* Optional: Zentriert den Inhalt horizontal */
     text-decoration: none; /* Entfernt Unterstreichung */
     height: 100%;
+    margin-left: 16px;
 }
 
 #logo {
@@ -103,6 +109,7 @@ nav > * {
 
 #nav_menu {
     display: block;
+    
 }
 
 #nav_menu li {
@@ -111,6 +118,7 @@ nav > * {
     font-size: 30px;
     padding: 10px 5px;
     margin-left: 18px;
+    
 
 }
 
@@ -123,8 +131,21 @@ nav > * {
     left: 0;
     /* padding-bottom: auto; */
     height: calc(100vh - max(50px, min(150px, 7.5vh)));
+    animation: fadeSlideIn 0.4s ease forwards;
+   
 
 }
+
+@keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      max-height: 0;
+    }
+    100% {
+      opacity: 1;
+      max-height: 800px; /* Oder die tatsächliche Höhe */
+    }
+  }
 
 #nav_dropdown {
     display: none;
@@ -153,10 +174,14 @@ nav > * {
     width: auto;
     height: 100%;
     padding-bottom: 0;
+    
 }
 
 #nav_right_subcontainer {
     display: flex;
+    height: 140px;
+    margin-top: 30px;
+    
 }
 
 #nav_contact {
@@ -167,15 +192,16 @@ nav > * {
 
 #nav_right_sep {
     display: none;
+    
 }
 
 #nav_radio_container {
     display: flex;
-    align-items: center;
     color: var(--text-color-inactive);
     border-color: #00000000;
     margin-right: 7px;
     margin-left: auto;
+    height: fit-content;
     
 }
 
