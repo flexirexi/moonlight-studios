@@ -17,9 +17,11 @@ menuIcon.addEventListener('click', function () {
   if (menuIcon.classList.contains('fa-bars')) {
     menuIcon.classList.remove('fa-bars');
     menuIcon.classList.add('fa-times');
+    menuIcon.classList.add('animate'); // Drehung hinzufügen
   } else {
     menuIcon.classList.remove('fa-times');
     menuIcon.classList.add('fa-bars');
+    menuIcon.classList.remove('animate'); // Drehung entfernen
   }
 
   // Füge eine Animation hinzu

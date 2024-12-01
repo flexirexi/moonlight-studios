@@ -136,8 +136,8 @@ nav > * {
 }
 
 .menu-icon.animate {
-    transform: rotate(90deg) scale(1.2); /* Drehung und Skalierung */
-    opacity: 0.8; /* Leicht transparent */
+    transform: rotate(360deg) scale(1.2); /* Drehung und Skalierung */
+    opacity: 0.4; /* Leicht transparent */
 }
 
 #nav_right_container {
