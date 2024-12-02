@@ -3,6 +3,7 @@ const nav = document.getElementById("header_nav");
 const nav_cont = document.getElementById("nav_right_container");
 const navbar = document.getElementById("header_nav");
 const nav_checkbox = document.getElementById("nav_dropdown");
+const links = document.getElementsByTagName("a");
 
 let wasSmallScreen = window.innerWidth < 768; // Initial prüfen, ob der Bildschirm klein ist
 const isSafari = CSS.supports("(-webkit-backdrop-filter: blur(10px))");
@@ -64,6 +65,12 @@ function menuClick() {
   setTimeout(() => menuIcon.classList.remove('animate'), 300);
 }
 
+for(let i = 0; i <links.length; i++) {
+  links[i].addEventListener("click", function() {
+    nav_checkbox.checked = false;
+    menuClick();
+  })
+};
 
 document.addEventListener('scroll', function () {
   if (window.scrollY > 10) { // Wenn mehr als 50px gescrollt wurde
@@ -79,6 +86,7 @@ document.addEventListener('scroll', function () {
 nav_checkbox.addEventListener('change', function () {
   menuClick();
 });
+
 
 document.addEventListener('touchmove', function (e) {
   // Prüfen, ob die Seite ganz oben ist und der Benutzer nach unten scrollt
@@ -102,4 +110,12 @@ window.addEventListener("resize", function () {
 
   // Aktuellen Zustand speichern
   wasSmallScreen = isSmallScreen;
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  let audios = document.getElementsByTagName('audio');
+  for (let i = 0; i < audios.length; i++) {
+    
+    audios[i].volume = 0.5; // Lautstärke auf 50% setzen
+  }
 });

@@ -62,55 +62,90 @@
 
     <article id="index_art_welcome" class="article">
         <h1 id="index_art_welcome_h1">Welcome to moonlight studios</h1>
-        <section id="index_art_welcome_section">
+        <section id="index_art_welcome_section" class="text">
             Some text which gives a little impression of who we are. Who will feel the most comfortable at our studio and music center. 
             We are a small but modern studio realizing our hobby, strengthening our profession with a diploma in audio engineering.
             We do not make a secret of bein new but educated and professional enough. <br><br>
 
             Maybe some "between the lines" what music suites us the best and what musical life style is typical for us. <br><br>    
 
-            Some indication of what we do and what client and guests can expect from us.
+            Some indication of what we do and what client and guests can expect from us. <br>
         </section>
         <a href="studio.html" id="index_art_welcome_link" class="button">tell me more</a>
     </article>
 
     <article id="index_art_services" class="article">
         <h1 id="index_art_services_h1">Our production</h1>
-        <section id="index_art_services_section">
+        <section id="index_art_services_section" class="text">
             We don't offer just recording, but also mixing, mastering and other production tasks - separately. You can unders our services as a modular system:
             you request a single task to finish your production or you request us to accompany your project as a whole. <br><br>
 
-            It's up to you!
+            It's up to you! <br>
         </section>
         <a href="services.html" id="index_art_services_link" class="button">Services</a>
     </article>
 
     <article id="index_art_our_sound" class="article">
         <h1 id="index_art_our_sound">What we sound like</h1>
-        <section id="index_art_our_sound_section">
+        <section id="index_art_our_sound_section" class="text">
             Just to show what we are capable of is essential for the first impression. So, here are some takes. We chose 2
             very different productions on purpose. <br>
         </section>
-        <!-- <audio src="assets/audio_files/landing_page/cinematic_risen_from_the_dark.mp3" controls ></audio> -->
-        <div class="audio-player">
-            <div>
-                <input type="file" class="file-input" id="mp3-input" accept="audio/mp3">
-            </div>
-            <div class="player-controls">
-                <button class="buttons" id="play-pause-btn" title="Play / Pause"><span class="pp-icon"></span></button>
-                <button class="buttons" id="stop-btn" title="Stop"><span class="stop-icon"></span></button>
-            </div>
-            <div class="waveform">
-                <div id="wave-chart" style="width: 50%; height: 150px; margin: auto"></div>
-            </div>
+        <div id="index_audio_container1" class="audio_container">
+            <h4 id="index_audio_1">Cinematic - Risen from the dark</h4>
+                <details>
+                <summary>details</summary>
+                <p>
+                    The regular ticket sale starts on Jan 20th, 2025. Upon pre-registration, you will receive a personalized link 
+                    to to vip ticket sales web page <b>one day before the regular ticket sale</b>. Then, you have the exclusive opportunity
+                    to get your tickets without stress.
+                </p>
+            </details>
+            <audio src="assets/audio_files/landing_page/cinematic_risen_from_the_dark.mp3" controls controlsList="nodownload">Your Browser does not support this audio element.</audio>
+        </div>
+        <div id="index_audio_container2" class="audio_container">
+            <h4 id="index_audio_2">Cinematic - Ready for space</h4>
+                <details>
+                <summary>details</summary>
+                <p>
+                    The regular ticket sale starts on Jan 20th, 2025. Upon pre-registration, you will receive a personalized link 
+                    to to vip ticket sales web page <b>one day before the regular ticket sale</b>. Then, you have the exclusive opportunity
+                    to get your tickets without stress.
+                </p>
+            </details>
+            <audio src="assets/audio_files/landing_page/cinematic_record_ready_for_space.mp3" controls controlsList="nodownload">Your Browser does not support this audio element.</audio>
+        </div>
+        <div id="index_audio_container3" class="audio_container">
+            <h4 id="index_audio_3">Electronic - Echo im Kopf</h4>
+                <details>
+                <summary>details</summary>
+                <p>
+                    The regular ticket sale starts on Jan 20th, 2025. Upon pre-registration, you will receive a personalized link 
+                    to to vip ticket sales web page <b>one day before the regular ticket sale</b>. Then, you have the exclusive opportunity
+                    to get your tickets without stress.
+                </p>
+            </details>
+            <audio src="assets/audio_files/landing_page/electronic_echo_im_kopf.mp3" controls controlsList="nodownload">Your Browser does not support this audio element.</audio>
+        </div>
+        <div id="index_audio_container4" class="audio_container">
+            <h4 id="index_audio_4">Piano - Die Welle der Melancholie</h4>
+                <details>
+                <summary>details</summary>
+                <p>
+                    The regular ticket sale starts on Jan 20th, 2025. Upon pre-registration, you will receive a personalized link 
+                    to to vip ticket sales web page <b>one day before the regular ticket sale</b>. Then, you have the exclusive opportunity
+                    to get your tickets without stress.
+                </p>
+            </details>
+            <audio src="assets/audio_files/landing_page/piano_die_welle_der_melancholie2.mp3" controls controlsList="nodownload">Your Browser does not support this audio element.</audio>
         </div>
     </article>
     
     <article id="index_art_outside" class="article"></article>
     <footer id="index_art_footer"></footer>
 
+
     <script src="assets/js/index.js"></script>
-    <script src="assets/js/player.js"></script>
     <!-- Font Awesome kit -->
     <script src="https://kit.fontawesome.com/ee874b1d34.js" crossorigin="anonymous"></script>
 </body>
