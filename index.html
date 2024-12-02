@@ -91,13 +91,26 @@
             Just to show what we are capable of is essential for the first impression. So, here are some takes. We chose 2
             very different productions on purpose. <br>
         </section>
-        <audio src="assets/audio_files/landing_page/" controls ></audio>
+        <!-- <audio src="assets/audio_files/landing_page/cinematic_risen_from_the_dark.mp3" controls ></audio> -->
+        <div class="audio-player">
+            <div>
+                <input type="file" class="file-input" id="mp3-input" accept="audio/mp3">
+            </div>
+            <div class="player-controls">
+                <button class="buttons" id="play-pause-btn" title="Play / Pause"><span class="pp-icon"></span></button>
+                <button class="buttons" id="stop-btn" title="Stop"><span class="stop-icon"></span></button>
+            </div>
+            <div class="waveform">
+                <div id="wave-chart" style="width: 50%; height: 150px; margin: auto"></div>
+            </div>
+        </div>
     </article>
     
     <article id="index_art_outside" class="article"></article>
     <footer id="index_art_footer"></footer>
 
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/player.js"></script>
     <!-- Font Awesome kit -->
     <script src="https://kit.fontawesome.com/ee874b1d34.js" crossorigin="anonymous"></script>
 </body>
