@@ -73,7 +73,7 @@ a:hover {
 .button {
     display: inline-block;
     font-size: 15px;
-    padding: 0 8px;
+    padding: 8px 8px; /* for safari ...*/
     color: black;
     background-color: var(--primary-color);
     align-content: center;
@@ -185,6 +185,7 @@ nav > * {
 }
 
 #nav_contact {
+
     height: 35px;
     margin-left: 22px;
     
@@ -381,6 +382,9 @@ input[name="language"]:checked + label {
     }
 
     #nav_contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-left: auto;
         height: 30px;
     }

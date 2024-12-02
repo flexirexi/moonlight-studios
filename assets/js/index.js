@@ -24,7 +24,8 @@ function menuClick() {
     //nav.style.webkitBackdropFilter = 'blur(10px)'; //funzt irgendwie nicht - entweder nav oder nav_cont aber nicht beides...
     
     if(isSafari) {
-      nav_cont.style.backgroundColor = "#000000B0";
+      // nav_cont.style.backgroundColor = "#000000B0"; simple method
+      nav_cont.style.background = 'linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.5))'; //cool method
     } else {
       nav_cont.style.backdropFilter = "blur(10px)";
       nav_cont.style.webkitBackdropFilter = 'blur(10px)';
