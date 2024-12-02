@@ -64,8 +64,13 @@ a:hover {
 }
 
 
-
 /* 02 Utility classes and deviations from general STYLES --------------------- */
+.article { 
+    /* why? -> I am specifically addressing the articles in the body, 
+    not all article elements per se */
+    
+}
+
 .text {
     color: var(--text-color);
 }
