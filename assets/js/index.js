@@ -5,10 +5,16 @@ const navbar = document.getElementById("header_nav");
 const nav_checkbox = document.getElementById("nav_dropdown");
 
 let wasSmallScreen = window.innerWidth < 768; // Initial prüfen, ob der Bildschirm klein ist
+const isSafari = CSS.supports("(-webkit-backdrop-filter: blur(10px))");
 
 
 function menuClick() {
-  if (menuIcon.classList.contains('fa-bars')) {
+  // if (checkbox.checked) {
+  //   console.log('Checkbox ist aktiviert!');
+  // } else {
+  //   console.log('Checkbox ist deaktiviert!');
+  // }
+  if (nav_checkbox.checked) {
     //öffnen
     menuIcon.classList.remove('fa-bars');
     menuIcon.classList.add('fa-times');
@@ -17,8 +23,13 @@ function menuClick() {
     nav.style.backgroundColor = "black";
     //nav.style.webkitBackdropFilter = 'blur(10px)'; //funzt irgendwie nicht - entweder nav oder nav_cont aber nicht beides...
     
-    nav_cont.style.backdropFilter = "blur(10px)";
-    nav_cont.style.webkitBackdropFilter = 'blur(10px)';
+    if(isSafari) {
+      nav_cont.style.backgroundColor = "#000000B0";
+    } else {
+      nav_cont.style.backdropFilter = "blur(10px)";
+      nav_cont.style.webkitBackdropFilter = 'blur(10px)';
+
+    }
     
     document.body.style.overflow = 'hidden'; //scrollen verbieten
     nav_cont.style.overflowY = "auto"; //es gibt smartphones im querformat, bei denen das menu größer als der display ist..
@@ -30,13 +41,9 @@ function menuClick() {
     menuIcon.classList.add('fa-bars');
     menuIcon.classList.remove('animate'); // Drehung entfernen
     
-    //nav.style.backdropFilter = "none";
-    //nav.style.webkitBackdropFilter = 'none';
-    
-    
     nav_cont.style.backdropFilter = "none";
     nav_cont.style.webkitBackdropFilter = 'none';
-    
+    nav_cont.style.backgroundColor = "none";
     
     document.body.style.overflow = ''; //scrollen erlauben
     document.body.style.overscrollBehavior = "none" //kein neu laden durch runterziehen
@@ -67,7 +74,10 @@ document.addEventListener('scroll', function () {
   }
 });
 
-menuIcon.addEventListener('click', menuClick);
+//menuIcon.addEventListener('click', menuClick); //unten ist replacement
+nav_checkbox.addEventListener('change', function () {
+  menuClick();
+});
 
 document.addEventListener('touchmove', function (e) {
   // Prüfen, ob die Seite ganz oben ist und der Benutzer nach unten scrollt
