@@ -64,11 +64,39 @@ a:hover {
 }
 
 
+audio {
+    width: 300px; /* Breite */
+    background-color: #333; /* Hintergrundfarbe */
+    color: white; /* Textfarbe */
+    border-radius: 0px; /* Runde Ecken entfernen */
+    padding: 0; /* Padding entfernen */
+    outline: none; /* Fokusrahmen entfernen */
+    box-shadow: none; /* Schatten entfernen */
+    -webkit-appearance: none; /* Browser-spezifische Stile deaktivieren */
+    appearance: none; /* Generelle Stile deaktivieren */
+  }
+  
+  audio::-webkit-media-controls-panel {
+    background-color: #333; /* Dunkler Hintergrund für die Controls */
+    border-radius: 0px; /* Runde Ecken der Controls entfernen */
+  }
+  
+  audio::-webkit-media-controls-play-button,
+  audio::-webkit-media-controls-pause-button,
+  audio::-webkit-media-controls-seek-bar {
+    background-color: #444; /* Hintergrund der Buttons */
+    border-radius: 0px; /* Runde Ecken der Buttons entfernen */
+  }
+  
+  audio::-webkit-media-controls-timeline {
+    background-color: #555; /* Hintergrund der Fortschrittsleiste */
+  }
+
 /* 02 Utility classes and deviations from general STYLES --------------------- */
 .article { 
     /* why? -> I am specifically addressing the articles in the body, 
     not all article elements per se */
-    
+
 }
 
 .text {
